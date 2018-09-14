@@ -1,4 +1,5 @@
 import random
+import math
 
 
 # Opgave 1
@@ -57,7 +58,7 @@ L1 > L2                     # True
 
 # Opgave 5
 s = 'Guido van Rossum'
-l = s.split(" ")
+l = s.split(" ")            # l = ['Guido', 'van', 'Rossum'].
 
 
 
@@ -75,7 +76,7 @@ for i in range(1, 6):
 [1, 1, 1, 1, 1, 1]
 
 ### B
-L1 = list(range(1, 10, 2))   # [1, 3, 5, 7, 9]
+L1 = list(range(1, 10, 2))  # [1, 3, 5, 7, 9]
 L2 = L1    # shallow copy
 L1[0] = 'abc'
 print(L1)  # ['abc', 3, 5, 7, 9]
@@ -87,3 +88,44 @@ while b < 10:
     print (b)
     a, b = b, a+b
 # 1 1 2 3 5 8
+
+
+
+# Opgave 7
+palindroom_example1 = "lepel"
+palindroom_example2 = "parterretrap"
+
+def is_palindroom(string):
+    string= str(string)
+    x = 0
+    while x < len(string) / 2:
+        # print(string[x] + " != " + string[(len(string)-1)-x])
+        if (string[x] != string[(len(string)-1)-x]):
+            return False
+        x += 1
+    return True
+
+def is_palindroom_short(string):
+    length = len(str(string))
+    return str(string)[0:math.ceil(length/2)] == str(string)[math.floor(length/2):length][::-1]
+
+def is_palindroom_evenshorter(string):
+    str(string) == str(string)[::-1]
+    
+is_palindroom("lepel")
+is_palindroom("parterretrap")
+is_palindroom("test")
+is_palindroom("oke")
+
+
+# Opgave 8
+
+
+
+
+# Opgave 9
+
+
+
+
+# Opgave 10
