@@ -1,7 +1,7 @@
 import random
 import math
 
-
+"""
 # Opgave 1
 
 array_a = [2,3,4]
@@ -117,15 +117,21 @@ is_palindroom("parterretrap")
 is_palindroom("test")
 is_palindroom("oke")
 
-
 # Opgave 8
+T = int(input("Temperatuur in graden Celsius(-20..10): "))
+B = int(input("Windkracht in Beaufort(1..9): "))
+G = 13 + 0.62*T  -  14 * B ** 0.24  +  0.47 * T * B ** 0.24
+print("Gevoelstemperatuur = ", round(G, 1))
 
 
-
-
+"""
 # Opgave 9
-
-
+### A
+l = 3
+s = "ACAAGATGCCATTGTCCCCCGGCCTCCTGCTGCTGCTGCTCTCCGGGGCCACGGCCACCGCTGCCCTGCCCCTGGAGGGTGGCCCCACCGGCCGAGACAGCGAGCATATGCAGGAAGCGGCAGGAATAAGGAAAAGCAGCCTCCTGACTTTCCTCGCTTGGTGGTTTGAGTGGACCTCCCAGGCCAGTGCCGGGCCCCTCATAGGAGAGGAAGCTCGGGAGGTGGCCAGGCGGCAGGAAGGCGCACCCCCCCAGCAATCCGCGCGCCGGGACAGAATGCCCTGCAGGAACTTCTTCTGGAAGACCTTCTCCTCCTGCAAATAAAACCTCACCCATGAATGCTCACGCAAGTTTAATTACAGACCTGAA"
+for i in range(len(s) - (l-1)):
+    if s[i:i+l] == "ATG":
+        print(i + (l+1))
 
 
 # Opgave 10
