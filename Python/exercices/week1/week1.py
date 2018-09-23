@@ -2,7 +2,6 @@ import random
 import math
 
 # Opgave 1
-
 array_a = [2,3,4]
 array_b = ['red', 'green', 'blue']
 array_c = list(range(3,5+1))
@@ -116,11 +115,15 @@ is_palindroom("parterretrap")
 is_palindroom("test")
 is_palindroom("oke")
 
+
+
 # Opgave 8
 T = int(input("Temperatuur in graden Celsius(-20..10): "))
 B = int(input("Windkracht in Beaufort(1..9): "))
 G = 13 + 0.62*T  -  14 * B ** 0.24  +  0.47 * T * B ** 0.24
 print("Gevoelstemperatuur = ", round(G, 1))
+
+
 
 # Opgave 9
 l = 3
@@ -128,3 +131,34 @@ s = "ACAAGATGCCATTGTCCCCCGGCCTCCTGCTGCTGCTGCTCTCCGGGGCCACGGCCACCGCTGCCCTGCCCCTGG
 for i in range(len(s) - (l-1)):
     if s[i:i+l] == "ATG":
         print(i + (l+1))
+
+
+
+# Opgave 10
+from sys import stdin
+
+NUMBER_OF_DAYS = 10
+NUMBER_OF_HOURS = 24
+
+data = []
+
+for i in range(NUMBER_OF_DAYS):
+    data.append([])
+    for j in range(NUMBER_OF_HOURS):
+        data[i].append([])
+
+# read input using input redirection from a file
+for line in stdin:
+    if line[0] == '#':
+        continue
+    L = line.strip().split()
+        
+print("Gemiddelde temperaturen:")
+
+
+avg = 0
+# find the average daily temperature
+for i in range(NUMBER_OF_DAYS):
+    avg += data[i]
+
+avg /= len(data)
