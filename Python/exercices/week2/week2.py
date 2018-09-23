@@ -1,7 +1,6 @@
 import collections
+import math
 
-
-"""
 # opgave 1
 ### A
 tup1 = (1,2,3,4,5)
@@ -87,15 +86,6 @@ for k in sorted(d):
 D = {'a':1, 'b':2, 'c':3, 'd':1, 'e':3, 'f': 5}
 print(set(d))
 
-### C
-TODO: this
-
-### D
-TODO: this
-
-### E
-TODO: this
-
 
 
 # opgave 4
@@ -164,13 +154,7 @@ def is_pangram(str):
     return set("abcdefghijklmnopqrstuvwxyz") - set(str.lower()) == set()
 
 print(is_pangram("Filmquiz bracht knappe ex-yogi van de wijs"))
-"""
 
-
-
-### D TODO: this
-def sd(dict):
-    return 0
 
 
 
@@ -178,12 +162,12 @@ def sd(dict):
 # opgave 7
 
 # modc.py wordt meerdere malen geimporteert
-
+# z = moda.Simple() is het Probleem
 
 
 
 ###################
-#    opgave 8     # TODO: this
+#    opgave 8     #
 ###################
 
 from random import randint
@@ -207,15 +191,38 @@ print_board(board)
 row = randint(0, BOARD_SIZE-1)
 ship_col = randint(0, BOARD_SIZE-1)
 
-"""
-    here your code :
-    -ask the user for a guess
-    -if the user's right, the game ends
-    -warn if the guess is out of the board
-    -warn if the guess was already made
-    -if the guess is wrong, mark the point with an X and start again
-    -print turn and board again here
-"""
+# here your code :
+# -ask the user for a guess
+# -if the user's right, the game ends
+# -warn if the guess is out of the board
+# -warn if the guess was already made
+# -if the guess is wrong, mark the point with an X and start again
+# -print turn and board again here
     
 if turn == NR_GUESSES-1:
     print ("Game Over")
+
+
+
+# opgave 9
+def devisors(num):
+    divs = [1]
+    for i in range(2, math.ceil( math.sqrt(num))):
+        if num % i == 0:
+            divs.append(i)
+            divs.append(int(num / i))
+
+    # print(str(num)+"    "+str(divs))
+    return divs
+
+def perfect_numbers_until(until):
+    perfects = []
+    for i in range(2, until +1):
+        if sum(devisors(i)) == i:
+            perfects.append(i)
+
+    return perfects
+
+
+
+print(perfect_numbers_until(10_000))
