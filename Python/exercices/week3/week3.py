@@ -60,7 +60,6 @@ main()
 #  NEE
 
 
-"""
 
 # opgave 3
 class Circle():
@@ -81,3 +80,69 @@ print(c.area())
 # assert c.area() == 200.96
 # assert c.perimeter() == 50.24
 # assert c.perimeter() == 50.24
+"""
+
+
+
+
+
+# opgave 4 TODO
+assert Roman.roman_to_int('C')== 100
+assert Roman.roman_to_int('XLIX')== 49
+assert Roman.roman_to_int('MMMCMLXXXVI')== 3986
+
+
+
+
+# opgave 5 TODO
+class Stack:
+    def __init__(self):
+        self.__elements = []
+    
+    # Return True if the stack is empty
+    def is_empty(self):
+        # your code...
+    
+    # Return the element at the top of the stack
+    # without removing it from the stack.
+    def peek(self):
+        # your code...
+    
+    # Store an element at the top of the stack
+    def push(self, value):
+        # your code...
+        
+    # Remove the element at the top of the stack and return it
+    def pop(self):
+        # your code...
+    
+    # Return the size of the stack
+    def get_size(self):
+        # your code...
+
+
+
+from stack import Stack
+
+stack = Stack()
+for i in range(10):
+    stack.push(i)
+
+while not stack.is_empty():
+    # prints9 8 7 6 5 4 3 2 1 0
+    print(stack.pop(), end = " ")
+
+
+
+
+
+# opgave 6 TODO
+from stop_watch import StopWatch
+size = 1000000
+stopWatch = StopWatch()
+sum = 0    
+for i in range(1, size + 1):
+    sum += i 
+
+stopWatch.stop()
+print("The loop time is", stopWatch.get_elapsed_time(), "milliseconds")
