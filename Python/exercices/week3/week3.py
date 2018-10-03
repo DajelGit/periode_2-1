@@ -1,5 +1,4 @@
 
-"""
 
 # opgave 1
 ### A
@@ -84,14 +83,15 @@ print(c.area())
 
 
 
-
 # opgave 4
 class Roman():
     rom_val = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
 
-    def roman_to_int(self, roman):
+    @classmethod
+    def roman_to_int_me(self, roman):
         return eval(self.__roman_to_int_inner(roman))
 
+    @classmethod
     def __roman_to_int_inner(self, roman):
         if len(roman) == 1:
             return str(self.rom_val[roman])
@@ -101,10 +101,22 @@ class Roman():
         else:
             return "{} + {}".format(self.rom_val[roman[-1]], self.__roman_to_int_inner(roman[:-1]))
 
-assert Roman.roman_to_int('C') == 100
-assert Roman.roman_to_int('XLIX') == 49
-assert Roman.roman_to_int('MMMCMLXXXVI') == 3986
+    @classmethod
+    def roman_to_int(cls, s):
+        rom_val = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+        int_val = 0
+        for i in range (len(s)):
+            if i > 0 and rom_val[s[i]] > rom_val[s[i - 1]]:
+                print("+=", rom_val[s[i]], - 2 * rom_val[s[i - 1]])
+                int_val += rom_val[s[i]] - 2 * rom_val[s[i - 1]]
+            else: 
+                print("+=", rom_val[s[i]])
+                int_val += rom_val[s[i]]
+        return int_val
 
+# assert Roman.roman_to_int('C') == 100
+assert Roman.roman_to_int('XLIX') == 49
+# assert Roman.roman_to_int('MMMCMLXXXVI') == 3986
 
 
 # opgave 5
@@ -120,7 +132,10 @@ class Stack:
     # Return the element at the top of the stack
     # without removing it from the stack.
     def peek(_):
-        return _.__elements[_.__index-1]
+        if self.is_empty():
+            return none
+        else:
+            return _.__elements[_.__index-1]
     
     # Store an element at the top of the stack
     def push(_, value):
@@ -132,8 +147,11 @@ class Stack:
         
     # Remove the element at the top of the stack and return it
     def pop(_):
-        _.__index -= 1
-        return _.__elements[_.__index]
+        if self.is_empty():
+            return none
+        else:
+            _.__index -= 1
+            return _.__elements[_.__index]
     
     # Return the size of the stack
     def get_size(_):
@@ -206,7 +224,7 @@ print("The loop time is", stopWatch.get_elapsed_time(), "milliseconds")
 # statement5
 
 
-"""
+
 # opgave 8
 import json, requests, sys
 from pprint import pprint
@@ -234,7 +252,7 @@ print(w)
 
 
 
-"""
+
 # opgave 9
 # ik miste alleen een dubbele enter voor de class en op 2 plekken tonden onnodige extra spaties na de code 
 # ik ben wel verbaast dat mijn stuckje om self te vervangen met underscore geen problemen oplevert in pep8
@@ -272,4 +290,3 @@ for i in range(1, size + 1):
 
 stopWatch.stop()
 print("The loop time is", stopWatch.get_elapsed_time(), "milliseconds")
-"""
