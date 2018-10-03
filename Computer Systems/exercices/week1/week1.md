@@ -135,3 +135,44 @@ TODO
 -65 =  1011 1111
 127 =  0111 1111
 
+
+
+## opdracht 11
+1. 0111 = 7 en 1111 = -8
+2. Java kent alleen maar signed two's compplement integers. In C kan je aangeven wat voor soort integer je wil hebben.
+3. Nee Java kent geen unsigned integer.
+4. 0111 1111 1111 1111 1111 1111 1111 = 2147483647    en 1111 1111 1111 1111 1111 1111 1111 = -2147483648
+5. int i = 0xfe000000;   // -33554432
+
+
+
+## opdracht 12
+1. Dat je vanaf daar de getallen een lagere waarde hebben dan 1
+2. Het heeft in het binaire stelsel de zelfde betekennis als in het 10-tallig stelsel.
+3. 0,1111 base 2 = 15/16 base 10 = 0,9375 base 10
+4. 101,101 base 2 = 5 5/8 base 10 = 5,625 base 10
+
+
+
+## opdracht 13
+1 bit sign 
+8 bits Exponent
+23 bits Mantisse
+--------- +
+32 bits IEEE float point formaat
+
+0x42E48000
+
+0100 0010 1110 0100 1000 0000 0000 0000
+||        |                           |
+S   Exp.            Mantisse
+
+1000 0101 base 2  =>   -5 base 10
+110 0100 1000 0000 0000 0000 base 2 = 6586368 base 10
+
+0,6586368 * 10^-5 = 0,000006586368
+
+TODO
+
+## opdracht 14
+TODO
