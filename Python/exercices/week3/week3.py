@@ -80,49 +80,65 @@ print(c.area())
 # assert c.area() == 200.96
 # assert c.perimeter() == 50.24
 # assert c.perimeter() == 50.24
-"""
 
 
 
 
 
-# opgave 4 TODO
-assert Roman.roman_to_int('C')== 100
-assert Roman.roman_to_int('XLIX')== 49
-assert Roman.roman_to_int('MMMCMLXXXVI')== 3986
+# opgave 4
+class Roman():
+    rom_val = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+
+    def roman_to_int(self, roman):
+        return eval(self.__roman_to_int_inner(roman))
+
+    def __roman_to_int_inner(self, roman):
+        if len(roman) == 1:
+            return str(self.rom_val[roman])
+
+        if self.rom_val[roman[-2]] < self.rom_val[roman[-1]]:
+            return "{} - {}".format(self.rom_val[roman[-1]], self.__roman_to_int_inner(roman[:-1]))
+        else:
+            return "{} + {}".format(self.rom_val[roman[-1]], self.__roman_to_int_inner(roman[:-1]))
+
+assert Roman.roman_to_int('C') == 100
+assert Roman.roman_to_int('XLIX') == 49
+assert Roman.roman_to_int('MMMCMLXXXVI') == 3986
 
 
 
-
-# opgave 5 TODO
+# opgave 5
 class Stack:
-    def __init__(self):
-        self.__elements = []
+    def __init__(_):
+        _.__elements = []
+        _.__index = 0
     
     # Return True if the stack is empty
-    def is_empty(self):
-        # your code...
+    def is_empty(_):
+        return _.__index == 0
     
     # Return the element at the top of the stack
     # without removing it from the stack.
-    def peek(self):
-        # your code...
+    def peek(_):
+        return _.__elements[_.__index-1]
     
     # Store an element at the top of the stack
-    def push(self, value):
-        # your code...
+    def push(_, value):
+        if len(_.__elements) > _.__index:
+            _.__elements[_.__index] = value
+        else:
+            _.__elements.append(value)
+        _.__index += 1
         
     # Remove the element at the top of the stack and return it
-    def pop(self):
-        # your code...
+    def pop(_):
+        _.__index -= 1
+        return _.__elements[_.__index]
     
     # Return the size of the stack
-    def get_size(self):
-        # your code...
+    def get_size(_):
+        return _.__index
 
-
-
-from stack import Stack
 
 stack = Stack()
 for i in range(10):
@@ -133,16 +149,127 @@ while not stack.is_empty():
     print(stack.pop(), end = " ")
 
 
+# opgave 6 
+import time
+
+class StopWatch():
+    def __init__(_):
+        _.__start_time = 0
+        _.__stop_time = 0
+        _.start()
+
+    def start(_):
+        _.__start_time = time.time()
+
+    def stop(_):
+        _.__stop_time = time.time()
+
+    def get_elapsed_time(_):
+        return _.__stop_time - _.__start_time
+
+    def getStartTime(_):
+        return _.__start_time
+
+    def getStopTime(_):
+        return _.__stop_time
 
 
-
-# opgave 6 TODO
-from stop_watch import StopWatch
 size = 1000000
 stopWatch = StopWatch()
-sum = 0    
+sum = 0
 for i in range(1, size + 1):
-    sum += i 
+    sum += i
 
 stopWatch.stop()
 print("The loop time is", stopWatch.get_elapsed_time(), "milliseconds")
+
+
+
+# opgave 7
+# try:
+#     statement1
+#     statement2
+#     statement3      # ALs de regel hierboven een exception gooit van wordt deze regel niet uitgevoert
+
+# except Exception1:
+#     # Handle exception
+
+# except Exception2:
+#     # Handle exception
+
+# except Exception3:
+#     # Handle exception
+
+# finally:
+#     statement4
+
+# statement5
+
+
+"""
+# opgave 8
+import json, requests, sys
+from pprint import pprint
+
+# get command line arguments
+# if len(sys.argv) < 2:
+#     sys.exit()
+
+# argument 0 is program name
+location = ' '.join(sys.argv[1:])
+
+# download JSON data
+# api key = 842af58c3d0f07bb8fb62b5199a09350
+url='http://api.openweathermap.org/data/2.5/forecast?id={}&APPID=842af58c3d0f07bb8fb62b5199a09350'.format(location)
+response = requests.get(url)
+response.raise_for_status()
+
+# load JSON data into Python variable
+weatherData = json.loads(response.text)
+
+w = weatherData['list']
+print(weatherData)
+print(w)
+
+
+
+
+"""
+# opgave 9
+# ik miste alleen een dubbele enter voor de class en op 2 plekken tonden onnodige extra spaties na de code 
+# ik ben wel verbaast dat mijn stuckje om self te vervangen met underscore geen problemen oplevert in pep8
+
+import time
+
+
+class StopWatch():
+    def __init__(_):
+        _.__start_time = 0
+        _.__stop_time = 0
+        _.start()
+
+    def start(_):
+        _.__start_time = time.time()
+
+    def stop(_):
+        _.__stop_time = time.time()
+
+    def get_elapsed_time(_):
+        return _.__stop_time - _.__start_time
+
+    def getStartTime(_):
+        return _.__start_time
+
+    def getStopTime(_):
+        return _.__stop_time
+
+
+size = 1000000
+stopWatch = StopWatch()
+sum = 0
+for i in range(1, size + 1):
+    sum += i
+
+stopWatch.stop()
+print("The loop time is", stopWatch.get_elapsed_time(), "milliseconds")
+"""
