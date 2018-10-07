@@ -23,7 +23,7 @@ IN p
 OUT p		; Deze instructies dienen voor het instellen van een poort als input of output 
 
 ;;; E
-; we kunnen tegelijkertijd fetchen, decoden en uitvoeren dus het neemt maar 4 cycles in beslag.
+we kunnen tegelijkertijd fetchen, decoden en uitvoeren dus het neemt maar 4 cycles in beslag.
 
 ;;; F
 RJMP		; is relatief vanaf het huidige address waardoor het lukt binnen 16 bits maar waardoor je niet door het volledige geheugen kan springen
@@ -34,7 +34,7 @@ ADC			; Add is met carry flag
 ADD			; Add
 
 ;;; H
-; ja met 2 getallen die binair alleen maar bestaat uit 1-nen kan ja als je ze plus elkaar doet niet meer getallen nodig hebben dan je kwijt kan met 1 extra carry
+ja met 2 getallen die binair alleen maar bestaat uit 1-nen kan ja als je ze plus elkaar doet niet meer getallen nodig hebben dan je kwijt kan met 1 extra carry
 
 
 
