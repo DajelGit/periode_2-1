@@ -1,0 +1,120 @@
+# week 1
+
+1 = 0001
+2 = 0010
+3 = 0011
+4 = 0100
+5 = 0101
+6 = 0110
+7 = 0111
+8 = 1000
+9 = 1001
+A = 1010
+B = 1011
+C = 1100
+D = 1101
+E = 1110
+F = 1111
+
+## Opdracht 1
+a)
+
+A B U
+0 0 0
+0 1 1
+1 0 0
+1 1 1
+
+b)
+A B C  U
+0 0 0  1
+0 0 1  0
+0 1 0  1
+0 1 1  1
+1 0 0  1
+1 0 1  1
+1 1 0  1
+1 1 1  1
+
+c)
+A B C  U
+0 0 0  1
+0 0 1  1
+0 1 0  1
+0 1 1  1
+1 0 0  1
+1 0 1  1
+1 1 0  1
+1 1 1  0
+
+d)
+A B C D  U
+0 0 0 0  0
+0 0 0 1  1
+0 0 1 0  1
+0 0 1 1  1
+0 1 0 0  1
+0 1 0 1  1
+0 1 1 0  1
+0 1 1 1  1
+1 0 0 0  1
+1 0 0 1  1
+1 0 1 0  1
+1 0 1 1  1
+1 1 0 0  1
+1 1 0 1  1
+1 1 1 0  1
+1 1 1 1  1
+
+
+## Opdracht 2
+
+W D S R  Q
+1 1 1 0  SET
+1 0 0 1  RESET
+0 1 0 0  -
+0 0 0 0  -
+
+
+## Opdracht 3
+CLK = 0011 0011 0011 0011 0011 0011 00
+X =   0111 1000 0001 1111 1001 1000 00
+Q =   0100 0000 0001 0000 0001 0000 00
+
+Z =   1100 0111 1111 0000 0111 0111 11 
+
+
+## Opdracht 4 - EXTRA
+
+
+## Opdracht 5 - EXTRA
+
+
+## Opdracht 6 - EXTRA
+
+
+## Opdracht 7
+2^6 = 64 adressen kunnen worden bereikt als de adresbus bestaat uit 6 lijnen
+32k RAM = 32.000 bits ~ 2^15 dus 15 adreslijnen heb je nodig 
+2^32 bytes maximaal
+
+
+## Opdracht 8
+2^32 = 0x100000000
+1 cel beval 16 bits = 2 bytes
+2^32 adressen * 2 bytes = 2^33 bytes aan geheugen
+
+
+## Opdracht 9
+1280 x 1024 pixels scherm
+
+1280 x 1024 * 3 Bytes = 3,75 MB = 30 Mb
+30 Mb over een 100 Mbit/s netwerk duurt ongeveer 0.3 seconde
+
+
+
+## Opdracht 10
+Veel instructies duren 1 cycle
+Er wordt veel gewerkt met registers
+Eenvoudige instructies
+
