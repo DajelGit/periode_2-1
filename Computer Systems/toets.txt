@@ -1,0 +1,33 @@
+1 a
+2 a
+3 c  2^11 = 2^10 * 2 = 1024 *2 = 2048
+4 B (a)        Harvard architectuur   von Neuman architectuur
+5 b
+6 c
+7      ????? achter de komma is een breuk
+8 c
+9 b
+10 c   ?????
+11 c
+12 c
+13 A (c)   2^18
+14 b
+15 b
+16 d
+17     ?????
+18 c
+19 D (c) Insctruction Register
+20 b
+
+
+
+
+
+
+9
+
+A B  C D  E  F  G
+0 0  1 1  0  1  0
+0 1  1 0  0  0  1
+1 0  0 1  0  0  1
+1 1  0 0  1  0  0
