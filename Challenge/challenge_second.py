@@ -1,7 +1,6 @@
 import itertools
 
-NO = 9
-YES = 6
+NO = 6
 
 # VVD
 # Dzz
@@ -12,6 +11,7 @@ YES = 6
 # RUNS in about 17 ms on my machine
 def test(output = False):
     arrays = itertools.permutations([1,2,3,4], 3)
+    checks = 0
 
     # print(list(arrays))
 
@@ -20,7 +20,7 @@ def test(output = False):
 
         interesting = V + D + C + 1
 
-        if interesting >= NO:
+        if interesting == NO or interesting > 9:
             continue
 
         arrays2 = itertools.permutations(list(set([1,2,3,4,5,6,7,8,9]) -set([interesting, NO]) - set(array)))
@@ -36,8 +36,11 @@ def test(output = False):
             REG = int("{}{}{}".format(R,E,G))
 
             if (VVD + D66 + CDA + CU == REG):
+                checks += 1
                 if (output):
                     print("\n".join([str(VVD), str(D66), str(CDA), str(CU), str(REG)]), end="\n\n\n")
+
+    print(checks)
 
 
 if __name__ == '__main__':

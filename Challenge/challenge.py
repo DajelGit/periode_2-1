@@ -2,6 +2,9 @@ import time
 import challenge_slow
 import challenge_second
 import challenge_thirth
+import challenge_4
+import challenge_5
+import challenge_constraint
 
 
 
@@ -13,3 +16,6 @@ def speedtest(function):
 speedtest(challenge_slow.test)
 speedtest(challenge_second.test)
 speedtest(challenge_thirth.test)
+speedtest(challenge_4.test)
+speedtest(challenge_5.test)
+speedtest(challenge_constraint.test)
