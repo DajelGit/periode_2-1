@@ -1,0 +1,69 @@
+Functioneel Ontwerp
+
+
+
+1. Inleiding
+
+Korte samenvatting
+Wat kan er precies met het nieuwe systeem
+en Waarom wordt dit project uitgevoerd
+
+
+
+2. Doelgroep & doelen
+
+Wat zijn de verschillende doelgroepen.
+Wat kan er precies met het nieuwe systeem
+
+
+
+3. Scenario's
+
+Met het hele team moeten we opkomen met een aantal userstories.
+Gebruiker x wil dat .... of doelgroep ... wil ...
+
+
+
+3. Structuur van het project
+
+Uit welke onderdelen bestaat het project? hardware, software en html als een programmeertaal, maar nu met wat meer woorden.
+
+	3.1 ERD (of andere naam)
+
+	De subprojecten in een plaatje
+
+
+	3.2 Hardware	
+
+	De onderdelen van dit subproject
+
+
+	3.3 Software	
+
+	De onderdelen van dit subproject
+
+
+	3.4 HTML als een programmeertaal
+
+	De onderdelen van dit subproject
+	uitleg dat dit niet onder de MVP valt	
+
+
+
+
+4. De uitvoer
+
+geef per onderdeel in het ERD plaatje de volgende dingen aan:
+	Naam	
+	Wat is het doel
+	Korte beschrijving
+	Einddoel
+
+
+5. De invoer
+	geef per onderdeel in het ERD plaatje de volgende dingen aan:
+	Naam	
+	Wat is het doel
+	Autorisatie - welke gebruikers mogen er gebruik van maken / moet je inloggen
+	Korte beschrijving
+	Einddoel
