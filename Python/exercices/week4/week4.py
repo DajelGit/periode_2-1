@@ -15,7 +15,7 @@ class Plot:
 
     def __value_to_y(val):
         return 550-5*val
-    
+
     def __setup():
         root = Tk()
         root.title('simple plot')
@@ -46,21 +46,21 @@ class Plot:
         # print(s, x1, y1, x2, y2)
         s = s+1
         canvas.after(300, step)
-    
+
     def start():
         # x-axis
         for i in range(23):
             x = 50 + (i * 50)
             canvas.create_line(x,550,x,50, width=1, dash=(2,5))
             canvas.create_text(x,550, text='%d'% (10*i), anchor=N)
-            
+
         # y-axis
         for i in range(11):
             y = 550 - (i * 50)
             canvas.create_line(50,y,1150,y, width=1, dash=(2,5))
             canvas.create_text(40,y, text='%d'% (10*i), anchor=E)
 
-        canvas.after(300, step) 
+        canvas.after(300, step)
         root.mainloop()
 
 
@@ -111,7 +111,7 @@ def analyze_file(filename):
     try:
         with open(filename) as f:
             json_input = json.load(f)
-    
+
         # your code
         counts = {0 : 3, 1 : 7, 2 : 5}
         i = 3
@@ -126,22 +126,22 @@ def analyze_file(filename):
     except IOError:
         tkinter.messagebox.showwarning("Analyze File", "File " + filename + " does not exist") 
 
-def open_file(): 
+def open_file():
     filenameforReading = askopenfilename()
     filename.set(filenameforReading)
-        
-def show_histogram(counts): 
+
+def show_histogram(counts):
     numberOfBars = len(counts)
     width = int(canvas["width"])
     height = int(canvas["height"])
     heightBar = 0.75 * height
     widthBar = width - 20
     maxCounts = max(counts.values())
-    
+
     for i in range(numberOfBars):
         canvas.create_rectangle(i * widthBar / numberOfBars + 10, height - 20 - counts[i] * heightBar / maxCounts, (i + 1) * widthBar / numberOfBars + 10, height - 20)
         canvas.create_text(i * widthBar / numberOfBars + 10 + 0.5 * widthBar / numberOfBars, height - 10, text = chr(i + ord('a')))
-    
+
 window = Tk()
 window.title("Words Frequency Histogram")
 

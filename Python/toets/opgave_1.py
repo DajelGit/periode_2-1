@@ -5,7 +5,7 @@ def hex_char(value):
     else:
         return chr(value - 10 + ord('A'))
 
-# convert a decimal to a hex as a string 
+# convert a decimal to a hex as a string python
 def to_hex(decimal):
     pass
 
