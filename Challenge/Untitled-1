@@ -1,0 +1,14 @@
+#define N 9
+int q(int value, int q) {
+int out = 1;
+for(int i=0; i < q; i++){out *= value;}
+return out;
+}
+int x(int p, int index) {
+return( ((int)(p / q(10, 7-index))) % 10 ); // magic number 7
+}
+int main() {
+int array[]={12374895,12374985,13495278,13495728,14285763,14285673,21485793,21485973,24185763,24185673,31495287,31495827,32174895,32174985,41285793,41285973,41395287,41395827,43195278,43195728};
+int *p,r,e,a,u,g, i = 0;
+for(p=array; p<(&array)[1]; p++) {r = x(*p,3);e = x(*p,4);a = x(*p,5); = x(*p,6);g = x(*p,7);if(r==N||e==N||a==N||u==N||g==N){array[i] = 0;}i++;}while(1) {}   
+}
