@@ -1,0 +1,34 @@
+DASHBOARD
+
+Aan de linker kant is in de centrale te zien welke modules aangesloten zijn op het moment.
+De centrale zal iedere 60 seconde de data ontvangen van de aangeslote modules. 
+Per module is daarna te zien wat die gegevens waren links boven in het scherm.
+De naam en de beschrijving van de module die je hebt aangeklikt in het dashboard zullen ook van de module komen maar dit zal gecommuniceerd worden tijdens het opzetten van de connectie.
+
+Hieronder zitten daarna 2 onderdelen.
+
+Liks  bevinden de instellingen die een gebruiker kan instellen en daarna naar de modules kan sturen als configureren.
+Aan de rechterkant zitten 2 knoppen die gebruiker in staat stelt met de zonnewering software handmatig te laten cominiceren dat de positie van het zonnescherm verandt moet worden.
+
+
+
+
+
+Alle python software zal object georienteerd ontwikkeld worden en zal gecontroleerd worden op de pep8 standaarden. Na de MVP zullen deze regels ook afgedwonge worden voor alle programmeurs.
+Tot dan zullen deze afspraken als ongeschreven regels worden beschouwd.
+
+Er zal geen gebruik worden gemaakt van een database. De software is een op zich staand onderdeel dat geen verdere configuratie verwacht van de computer waar het op geinstalleerd wordt.
+
+
+
+
+Ontwikkel methode
+
+We werken op basis van feature requests en issues. Het project team is opgedeeld in 3 subteams. Namelijk: het software team, het hardware team en html taal team.
+De verschillende teams werken allemaal in hun eigen ontwikkel omgeving en maken ook eigen afspraken over hun ontwikkel standaarden. Als overkoepelend team hebben we afgesproken om
+bij elkaars repositories issues en featurerequests te maken als comminucatie. Een team kan er daarna zelf voor kiezen hoe zij het verder aan gaan pakken.
+Het software team zal deze issues overzetten naar een scrum board en op basis van de isssues sprints gaan draaien.
+
+Ook hebben alle leden afgesproken dat er nooit direct naar een master branch gepush mag worden met code. Code dient altijd ontwikkeld te worden in een apparte branch. 
+Het software team heeft als regel daar nog bovenop dat een lid van het software team zijn eigen code niet mag merchen met de master alleen een ander lid mag goedkeuren geven op een pullrequest.
+Deze pull....
